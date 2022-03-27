@@ -17,3 +17,5 @@
 .idea/CouplingSLAM.iml
 *.xml
 .idea/workspace.xml___jb_old___
+dist/
+*/*.egg-info/*

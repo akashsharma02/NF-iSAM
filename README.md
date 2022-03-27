@@ -5,8 +5,8 @@ The following instruction was tested on Ubuntu 18.04 with Miniconda.
 
 ## Requirements on Ubuntu
 ```
-sudo apt-get install gcc libc6-dev
-sudo apt-get install gfortran libgfortran3
+sudo apt-get install gcc
+sudo apt-get install gfortran
 sudo apt-get install libsuitesparse-dev
 ```
 We recommend to install NF-iSAM using conda environment. The default env name in the environment.yml is NFiSAM.
@@ -17,6 +17,8 @@ git clone git@github.com:MarineRoboticsGroup/NF-iSAM.git
 cd NF-iSAM
 conda env create -f environment.yml
 conda activate NFiSAM
+export FCFLAGS="-w -fallow-argument-mismatch -O2"
+export FFLAGS="-w -fallow-argument-mismatch -O2"
 pip3 install --upgrade TransportMaps
 pip3 install -r requirements.txt
 python setup.py install
